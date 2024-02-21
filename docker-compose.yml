@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  api:
+    container_name: ${API_CONTAINER_NAME}
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "${API_PORT}:8080"
+    restart: on-failure
